@@ -102,4 +102,4 @@ CHROMA_PATH=./chroma_db
 
 ## 👤 Author
 
-**Omkar Biradarmake**
+**Omkar Biradar**
