@@ -1,45 +1,57 @@
-
-
 # 📊 MeetingAI – RAG Powered Meeting Summarizer
 
-## Overview
+> Convert raw meeting transcripts into structured insights using summarization, LLM-based extraction, and Retrieval-Augmented Generation.
+
+![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=flat&logo=fastapi)
+![Python](https://img.shields.io/badge/Python-3.10+-blue?style=flat&logo=python)
+![React](https://img.shields.io/badge/React-20232A?style=flat&logo=react)
+![LLaMA](https://img.shields.io/badge/LLaMA_3-OpenRouter-teal?style=flat)
+![ChromaDB](https://img.shields.io/badge/ChromaDB-vector_store-orange?style=flat)
+
+---
+
+## 🧭 Overview
 
 MeetingAI is an AI-powered system that converts raw meeting transcripts into structured insights using summarization, LLM-based extraction, and Retrieval-Augmented Generation (RAG). It allows users to store, search, and query past meetings intelligently.
 
 ---
 
-## Features
+## ✨ Features
 
-* AI-based meeting summarization using BART / T5 / Pegasus
-* Structured extraction of decisions, action items, and key points using LLaMA 3
-* RAG-based semantic search across all meetings
-* Dual database system (SQLite + ChromaDB)
-* Action item tracking and status updates
-* AI-generated Slack and Email follow-up drafts
-
----
-
-## Tech Stack
-
-* FastAPI
-* Python
-* React
-* SQLite
-* ChromaDB
-* Hugging Face Transformers
-* OpenRouter (LLaMA 3)
-* Sentence Transformers (BGE embeddings)
+- 🧠 AI-based meeting summarization using **BART / T5 / Pegasus**
+- 📋 Structured extraction of decisions, action items, and key points using **LLaMA 3**
+- 🔍 **RAG-based semantic search** across all past meetings
+- 🗄️ Dual database system — **SQLite** (structured) + **ChromaDB** (vectors)
+- ✅ Action item tracking and status updates
+- 📨 AI-generated **Slack and Email** follow-up drafts
 
 ---
 
-## Architecture
+## 🛠️ Tech Stack
 
-User Transcript → Summarization (BART/T5) → LLM Structuring (LLaMA 3) →
-SQLite (structured data) + ChromaDB (vector store) → RAG Query System → Response
+| Layer | Technology |
+|---|---|
+| Backend | FastAPI, Python |
+| Frontend | React |
+| Structured Storage | SQLite |
+| Vector Store | ChromaDB |
+| Summarization | Hugging Face Transformers (BART / T5 / Pegasus) |
+| LLM Extraction | OpenRouter (LLaMA 3) |
+| Embeddings | Sentence Transformers (BGE) |
 
 ---
 
-## Setup Instructions
+## 🏗️ Architecture
+
+```
+User Transcript → Summarization (BART/T5) → LLM Structuring (LLaMA 3)
+    → SQLite (structured data) + ChromaDB (vector store)
+        → RAG Query System → Response
+```
+
+---
+
+## ⚙️ Setup
 
 ### Backend
 
@@ -55,11 +67,11 @@ npm install
 npm start
 ```
 
----
+### Environment Variables
 
-## Environment Variables
+Create a `.env` file in the root directory:
 
-```
+```env
 OPENROUTER_API_KEY=your_key_here
 DATABASE_URL=sqlite:///meetings.db
 CHROMA_PATH=./chroma_db
@@ -67,27 +79,27 @@ CHROMA_PATH=./chroma_db
 
 ---
 
-## API Endpoints
+## 🔌 API Endpoints
 
-* POST /upload-transcript
-* GET /meetings
-* GET /search
-* PUT /action-items/{id}
-* POST /generate-reminder
-
----
-
-## Future Improvements
-
-* Real-time transcription using Whisper
-* Multi-user collaboration
-* Cloud deployment
-* Advanced analytics dashboard
+| Method | Endpoint | Description |
+|---|---|---|
+| `POST` | `/upload-transcript` | Upload a meeting transcript |
+| `GET` | `/meetings` | List all stored meetings |
+| `GET` | `/search` | Semantic search across meetings |
+| `PUT` | `/action-items/{id}` | Update action item status |
+| `POST` | `/generate-reminder` | Generate Slack/Email follow-up |
 
 ---
 
-## Author
+## 🚀 Future Improvements
 
-Omkar Biradar
+- [ ] Real-time transcription using **Whisper**
+- [ ] Multi-user collaboration
+- [ ] Cloud deployment
+- [ ] Advanced analytics dashboard
 
 ---
+
+## 👤 Author
+
+**Omkar Biradarmake**
