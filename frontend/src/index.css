@@ -1,0 +1,105 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    @apply bg-slate-950 text-slate-100 font-sans;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-slate-900;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-indigo-900 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-indigo-700;
+  }
+
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(0.7);
+    cursor: pointer;
+  }
+
+  select option {
+    @apply bg-slate-900 text-slate-200;
+  }
+}
+
+@layer components {
+  .card {
+    @apply rounded-2xl border border-indigo-950/50 bg-slate-900/40 backdrop-blur-md p-5 shadow-lg transition-all duration-300 hover:border-indigo-500/30;
+  }
+
+  .btn-primary {
+    @apply px-5 py-2.5 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-white font-bold text-sm rounded-xl transition-all duration-200 shadow-lg shadow-indigo-600/15 disabled:opacity-40 disabled:cursor-not-allowed;
+  }
+
+  .btn-ghost {
+    @apply px-4 py-2 text-xs font-semibold rounded-xl transition-all duration-200 text-slate-400 hover:text-slate-200 hover:bg-slate-800;
+  }
+
+  .input-field {
+    @apply w-full bg-slate-900 border border-indigo-950 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-1 focus:ring-indigo-500 text-slate-100 placeholder-slate-600 transition-all duration-200;
+  }
+
+  .tab-active {
+    @apply bg-indigo-600 text-white shadow-md shadow-indigo-600/15;
+  }
+
+  .tab-inactive {
+    @apply text-slate-400 hover:text-slate-200;
+  }
+
+  .badge-pending {
+    @apply px-2.5 py-1 text-[10px] font-bold rounded-lg bg-amber-950/50 text-amber-400 border border-amber-900/50;
+  }
+
+  .badge-completed {
+    @apply px-2.5 py-1 text-[10px] font-bold rounded-lg bg-emerald-950/50 text-emerald-400 border border-emerald-900/50;
+  }
+}
+
+.glass {
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(99, 102, 241, 0.1);
+}
+
+.glow-indigo {
+  box-shadow: 0 0 30px rgba(99, 102, 241, 0.08);
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #818cf8, #c084fc, #f472b6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 2.5px solid rgba(99, 102, 241, 0.3);
+  border-top-color: #6366f1;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

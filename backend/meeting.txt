@@ -1,0 +1,4 @@
+John: We need to complete the backend by Friday.
+Alice: The frontend is almost done.
+John: Testing is still pending.
+Alice: Let's finalize the UI design tomorrow.
